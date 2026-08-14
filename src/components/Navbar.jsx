@@ -61,12 +61,7 @@ export default function Navbar({ activeTab, setActiveTab, userProfile, currentTw
             <Sparkles className="w-6 h-6 text-white" />
           </div>
           <div>
-            <div className="brand-title-row">
-              <h1 className="text-xl font-bold text-gradient">Career Simulator</h1>
-              <span className="v2-badge">
-                AI Platform v2.0
-              </span>
-            </div>
+            <h1 className="text-xl font-bold text-gradient">Career Simulator</h1>
             <p className="text-xs text-[var(--text-muted)]">Future Scenario & Career Decision Engine</p>
           </div>
         </div>
