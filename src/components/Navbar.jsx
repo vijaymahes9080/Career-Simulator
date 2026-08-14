@@ -7,18 +7,48 @@ import {
   Scale, 
   UserCheck, 
   Bot,
-  Sparkles
+  Sparkles,
+  FileText,
+  TrendingUp,
+  Shuffle,
+  Layers,
+  Calculator,
+  HelpCircle,
+  BookOpen,
+  DollarSign,
+  ShieldCheck,
+  Plane,
+  Users,
+  HeartPulse,
+  GitPullRequest,
+  Lightbulb,
+  Award
 } from 'lucide-react';
 
 export default function Navbar({ activeTab, setActiveTab, userProfile, currentTwinMatch }) {
   const navItems = [
     { id: 'whatif', label: 'What-If Lab', icon: Sliders, badge: 'Centerpiece' },
-    { id: 'timeline', label: 'Career Timeline', icon: GitCommit },
-    { id: 'skillgap', label: 'Skill Gap Radar', icon: BarChart3 },
+    { id: 'timeline', label: 'Timeline', icon: GitCommit },
+    { id: 'skillgap', label: 'Skill Gap', icon: BarChart3 },
     { id: 'risk', label: 'Risk Engine', icon: ShieldAlert },
-    { id: 'compare', label: 'Compare Careers', icon: Scale },
+    { id: 'compare', label: 'Compare', icon: Scale },
     { id: 'twin', label: 'Digital Twin', icon: UserCheck },
-    { id: 'aiagent', label: 'AI Agent', icon: Bot, badge: 'Live AI' },
+    { id: 'aiagent', label: 'AI Agent', icon: Bot, badge: 'AI' },
+    { id: 'resume', label: 'Resume Parser', icon: FileText, badge: 'New' },
+    { id: 'trends', label: 'Market Trends', icon: TrendingUp },
+    { id: 'pivot', label: 'Career Pivot', icon: Shuffle },
+    { id: 'skilltree', label: 'Skill Tree', icon: Layers },
+    { id: 'ppp', label: 'Global PPP', icon: Calculator },
+    { id: 'mock', label: 'Mock Interview', icon: HelpCircle },
+    { id: 'mentor', label: 'AI Mentor', icon: BookOpen },
+    { id: 'gig', label: 'Gig Freelance', icon: DollarSign },
+    { id: 'ethics', label: 'AI Ethics Risk', icon: ShieldCheck },
+    { id: 'visa', label: 'Global Visas', icon: Plane },
+    { id: 'peer', label: 'Peer Benchmark', icon: Users },
+    { id: 'burnout', label: 'Burnout Index', icon: HeartPulse },
+    { id: 'opensource', label: 'Open Source', icon: GitPullRequest },
+    { id: 'projects', label: 'Project Ideas', icon: Lightbulb },
+    { id: 'cert', label: 'Certificate', icon: Award, badge: 'Export' },
   ];
 
   return (
@@ -34,7 +64,7 @@ export default function Navbar({ activeTab, setActiveTab, userProfile, currentTw
             <div className="flex items-center gap-2">
               <h1 className="text-xl font-bold text-gradient">Career Simulator</h1>
               <span className="text-[10px] font-semibold tracking-wider uppercase bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-2 py-0.5 rounded-full">
-                AI Platform
+                AI Platform v2.0
               </span>
             </div>
             <p className="text-xs text-[var(--text-muted)]">Future Scenario & Career Decision Engine</p>
@@ -42,7 +72,7 @@ export default function Navbar({ activeTab, setActiveTab, userProfile, currentTw
         </div>
 
         {/* Nav Tabs */}
-        <nav className="flex items-center gap-1 overflow-x-auto w-full md:w-auto py-1 scrollbar-none">
+        <nav className="flex items-center gap-1 overflow-x-auto w-full md:w-auto py-1 scrollbar-none max-w-2xl">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
@@ -50,16 +80,16 @@ export default function Navbar({ activeTab, setActiveTab, userProfile, currentTw
               <button
                 key={item.id}
                 onClick={() => setActiveTab(item.id)}
-                className={`relative flex items-center gap-2 px-3 py-2 rounded-lg text-xs md:text-sm font-medium transition-all whitespace-nowrap ${
+                className={`relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
                   isActive
                     ? 'bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 shadow-md'
                     : 'text-[var(--text-secondary)] hover:text-white hover:bg-white/5'
                 }`}
               >
-                <Icon className={`w-4 h-4 ${isActive ? 'text-cyan-400' : 'text-slate-400'}`} />
+                <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-cyan-400' : 'text-slate-400'}`} />
                 <span>{item.label}</span>
                 {item.badge && (
-                  <span className="text-[9px] font-bold px-1.5 py-0.2 rounded bg-violet-500/20 text-violet-300 border border-violet-500/30">
+                  <span className="text-[9px] font-bold px-1.5 py-0.1 rounded bg-violet-500/20 text-violet-300 border border-violet-500/30">
                     {item.badge}
                   </span>
                 )}
@@ -76,7 +106,7 @@ export default function Navbar({ activeTab, setActiveTab, userProfile, currentTw
           <div>
             <div className="font-semibold text-slate-200">{userProfile.name}</div>
             <div className="text-[11px] text-slate-400">
-              Twin Readiness: <span className="text-emerald-400 font-bold">{currentTwinMatch}%</span>
+              Twin Match: <span className="text-emerald-400 font-bold">{currentTwinMatch}%</span>
             </div>
           </div>
         </div>
