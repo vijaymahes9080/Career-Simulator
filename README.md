@@ -4,10 +4,13 @@
 
 An **AI-Powered Career Decision Intelligence & Future Simulation Platform** designed to model potential career paths, calculate real-time "What-If" scenarios, analyze skill gaps, assess market risks, and maintain a Personal Career Digital Twin.
 
+[![Live Demo](https://img.shields.io/badge/🚀_Live_Demo-Click_Here_to_Launch-06B6D4?style=for-the-badge&logo=github)](https://vijaymahes9080.github.io/Career-Simulator/)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 ![React](https://img.shields.io/badge/React-18.x-cyan)
 ![Vite](https://img.shields.io/badge/Vite-8.x-violet)
 ![Status](https://img.shields.io/badge/Build-Passing-emerald)
+
+🌐 **Live Web Application**: [https://vijaymahes9080.github.io/Career-Simulator/](https://vijaymahes9080.github.io/Career-Simulator/)
 
 ---
 
