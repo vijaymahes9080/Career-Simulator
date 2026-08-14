@@ -56,14 +56,14 @@ export default function Navbar({ activeTab, setActiveTab, userProfile, currentTw
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
         
         {/* Brand Logo */}
-        <div className="flex items-center gap-3 cursor-pointer" onClick={() => setActiveTab('whatif')}>
+        <div className="brand-header cursor-pointer" onClick={() => setActiveTab('whatif')}>
           <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-[var(--cyan-primary)] to-[var(--violet-primary)] flex items-center justify-center shadow-lg shadow-[var(--cyan-glow)]">
             <Sparkles className="w-6 h-6 text-white" />
           </div>
           <div>
-            <div className="flex items-center gap-2">
+            <div className="brand-title-row">
               <h1 className="text-xl font-bold text-gradient">Career Simulator</h1>
-              <span className="text-[10px] font-semibold tracking-wider uppercase bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-2 py-0.5 rounded-full">
+              <span className="v2-badge">
                 AI Platform v2.0
               </span>
             </div>
@@ -72,7 +72,7 @@ export default function Navbar({ activeTab, setActiveTab, userProfile, currentTw
         </div>
 
         {/* Nav Tabs */}
-        <nav className="flex items-center gap-1 overflow-x-auto w-full md:w-auto py-1 scrollbar-none max-w-2xl">
+        <nav className="nav-container scrollbar-none">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
@@ -95,7 +95,7 @@ export default function Navbar({ activeTab, setActiveTab, userProfile, currentTw
         </nav>
 
         {/* User Digital Twin Quick Pill */}
-        <div className="hidden lg:flex items-center gap-3 bg-slate-900/80 border border-slate-800 rounded-xl px-3 py-1.5 text-xs">
+        <div className="hidden lg:flex twin-pill">
           <div className="w-8 h-8 rounded-lg bg-violet-500/20 border border-violet-500/30 flex items-center justify-center">
             <UserCheck className="w-4 h-4 text-violet-400" />
           </div>
