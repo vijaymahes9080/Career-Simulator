@@ -80,16 +80,12 @@ export default function Navbar({ activeTab, setActiveTab, userProfile, currentTw
               <button
                 key={item.id}
                 onClick={() => setActiveTab(item.id)}
-                className={`relative flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all whitespace-nowrap ${
-                  isActive
-                    ? 'bg-cyan-500/15 text-cyan-300 border border-cyan-500/30 shadow-md'
-                    : 'text-[var(--text-secondary)] hover:text-white hover:bg-white/5'
-                }`}
+                className={`nav-btn ${isActive ? 'active' : ''}`}
               >
                 <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-cyan-400' : 'text-slate-400'}`} />
                 <span>{item.label}</span>
                 {item.badge && (
-                  <span className="text-[9px] font-bold px-1.5 py-0.1 rounded bg-violet-500/20 text-violet-300 border border-violet-500/30">
+                  <span className="nav-badge">
                     {item.badge}
                   </span>
                 )}
